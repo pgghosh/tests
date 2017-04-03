@@ -1,0 +1,3 @@
+Implementation Notes :
+1. Since the application will be used by UI team, I chose spring boot as the way to package the applications as it is an easy to use method of delivery to UI developers who just need to run the generated executable jar.
+2. There could be several ways to process the request for the summary requirement. We could do all of the processing at the DAO layer, but I kept the summary aggregation at the DAO layer and the sorting at the Service Layer as the sort requirements is more of a business requirements. Sorting can be expensive and in some cases could be done more efficiently at the service layer instead of the DAO layer. Also DAO layer is more generic as it tends to serve multiple services.
